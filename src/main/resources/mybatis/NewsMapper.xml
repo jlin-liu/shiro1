@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cj.system.dao.UserMapper">
+    
+<!--    <resultMap type="User" id="UserResult">-->
+<!--        <result property="id"    column="id"    />-->
+<!--        <result property="newsType"    column="news_type"    />-->
+<!--        <result property="newsTitle"    column="news_title"    />-->
+<!--        <result property="newsContent"    column="news_content"    />-->
+<!--        <result property="picture"    column="picture"    />-->
+<!--        <result property="createTime"    column="create_time"    />-->
+<!--    </resultMap>-->
+    
+
+    <select id="selectByName" parameterType="News" resultMap="com.cj.system.entity.User">
+        select id, username, password, permiss from tb_test
+        where username=#{username}
+    </select>
+
+</mapper>
