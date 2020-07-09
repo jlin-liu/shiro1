@@ -11,4 +11,6 @@ public interface UserMapper {
     User selectByName(String username);
 
     List<User> selectUser();
+
+    int deleteUser(User user);
 }
